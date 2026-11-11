@@ -2873,7 +2873,14 @@ I.calendar=sv(`<rect x="6" y="8" width="36" height="34" rx="5" fill="#fff" strok
          Eigene firebaseConfig hier fest eintragen, dann ist jeder mit dieser Datei automatisch verbunden.
          Beispiel: const FIREBASE_CONFIG={apiKey:"...",authDomain:"...",projectId:"...",storageBucket:"...",messagingSenderId:"...",appId:"..."};
          Ohne feste Config kann man sie unter Einstellungen › Firebase einfügen. */
-      const FIREBASE_CONFIG=null;
+      const FIREBASE_CONFIG={
+        apiKey:"AIzaSyATnlLpg1cneAYAiOTYz2UI-McfghflXWc",
+        authDomain:"ollidows.firebaseapp.com",
+        projectId:"ollidows",
+        storageBucket:"ollidows.firebasestorage.app",
+        messagingSenderId:"519957564738",
+        appId:"1:519957564738:web:46578baae023745aad0cdb"
+      };
       const FB_V='10.12.2';
       function fbCfg(){return FIREBASE_CONFIG||LS.get('fbcfg',null)}
       function parseCfg(t){const o={};String(t||'').replace(/["']?(apiKey|authDomain|projectId|storageBucket|messagingSenderId|appId|measurementId|databaseURL)["']?\s*:\s*["']([^"']+)["']/g,(m,k,v)=>{o[k]=v});return o.apiKey&&o.projectId&&o.appId?o:null}
